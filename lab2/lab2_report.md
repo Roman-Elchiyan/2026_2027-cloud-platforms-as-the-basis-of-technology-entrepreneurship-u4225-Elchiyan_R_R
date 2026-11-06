@@ -7,8 +7,8 @@ Year: 2026/2027\
 Group: U4225\
 Author: Elchiyan Roman Romanovich\
 Lab: Lab2\
-Date of create: 06.11.2026\
-Date of finished: дата защиты не указана
+Date of create: 01.11.2026\
+Date of finished: 06.11.2026
 
 ## Цель работы
 
