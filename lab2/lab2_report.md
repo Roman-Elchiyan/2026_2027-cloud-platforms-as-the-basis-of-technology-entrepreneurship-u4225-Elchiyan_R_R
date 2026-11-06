@@ -71,6 +71,8 @@ Cloud Run передаёт контейнеру настроенный порт 
 
 *Рисунок 3. При обновлении страницы по одному URL отображаются разные ревизии сервиса.*
 
+[Открыть анимацию отдельно](https://raw.githubusercontent.com/Roman-Elchiyan/2026_2027-cloud-platforms-as-the-basis-of-technology-entrepreneurship-u4225-Elchiyan_R_R/refs/heads/main/lab2/images/ScreenRecorderProject2.gif)
+
 ## Итоговые логи и метрики
 
 После переключения трафика в журнале видны успешные запросы `GET` со статусом HTTP `200` и длительностью отдельных запросов 1–3 мс. Записи `ReplaceService` отражают обновление сервиса. При обращении к первой ревизии Cloud Run зарегистрировал запуск экземпляра с причиной `AUTOSCALING` и успешную стартовую проверку `STARTUP TCP probe` на порту `8080`. В показанном фрагменте ошибок нет.
