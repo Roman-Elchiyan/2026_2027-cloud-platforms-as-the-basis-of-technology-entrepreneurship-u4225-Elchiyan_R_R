@@ -1,0 +1,22 @@
+# ОС и редакторы
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+
+# Временные файлы и локальные секреты
+*.tmp
+*.log
+.env
+.env.*
+!.env.example
+*.tfstate
+*.tfstate.*
+*.tfvars
+.terraform/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
