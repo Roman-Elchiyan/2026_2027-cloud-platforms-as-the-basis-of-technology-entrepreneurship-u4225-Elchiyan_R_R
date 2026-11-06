@@ -10,96 +10,52 @@ Lab: Lab1
 Date of create: 01.10.2026  
 Date of finished: 06.11.2026
 
-## 1. Цель и задание
 
-Цель работы — изучить управление доступом и базовыми ресурсами Google Cloud на примере сервисного аккаунта, виртуальной машины Compute Engine и бакета Cloud Storage.
+## 1. Цель работы
 
-По [заданию лабораторной № 1](https://ex-itmo-ict-faculty.github.io/cloud-platforms-as-the-basis-of-technology-entrepreneurship/education/labs2023-2024/lab1/lab1/) необходимо создать сервисный аккаунт с ролью `Storage Admin`, запустить виртуальную машину `e2-micro` в режиме Spot, скопировать три файла из бакета `lab1-bucket-itmo`, затем заменить роль аккаунта на `Compute Viewer` и повторить копирование. После проверки созданные ресурсы нужно удалить.
+Изучить управление доступом в Google Cloud на примере сервисного аккаунта, виртуальной машины Compute Engine и бакета Cloud Storage. По [заданию лабораторной работы № 1](https://ex-itmo-ict-faculty.github.io/cloud-platforms-as-the-basis-of-technology-entrepreneurship/education/labs2023-2024/lab1/lab1/) требуется скопировать объекты из бакета на виртуальную машину при роли `Storage Admin`, затем заменить её на `Compute Viewer` и повторить операцию.
 
-Работа выполнялась в учебном проекте Google Cloud `cloud-platforms-as-the-basis` через Cloud Console и SSH-терминал виртуальной машины.
+## 2. Настройка сервисного аккаунта и виртуальной машины
 
-## 2. Создание сервисного аккаунта
+В проекте `cloud-platforms-as-the-basis` создан сервисный аккаунт `relchiyan-sa-lab1@cloud-platforms-as-the-basis.iam.gserviceaccount.com`. На уровне проекта ему назначена роль `Storage Admin` (`roles/storage.admin`).
 
-В разделе **IAM & Admin → Service Accounts** создан сервисный аккаунт `relchiyan-sa-lab1`. Название соответствует шаблону из задания: первая буква имени, фамилия и суффикс `-sa-lab1`.
+![Роль Storage Admin в IAM проекта](screenshots/02_service_account_storage_admin.png)
 
-| Параметр | Значение |
-| --- | --- |
-| Имя | `relchiyan-sa-lab1` |
-| Адрес | `relchiyan-sa-lab1@cloud-platforms-as-the-basis.iam.gserviceaccount.com` |
-| Описание | `Service account for Lab 1` |
-| Начальная роль | `Storage Admin` (`roles/storage.admin`) |
+*Рисунок 1 — Назначение роли Storage Admin сервисному аккаунту.*
 
-Аккаунт создан в активном состоянии (`Enabled`). На уровне проекта ему назначена роль `Storage Admin`, предоставляющая управление бакетами и объектами Cloud Storage.
-
-![Созданный сервисный аккаунт](screenshots/01_service_account_created.png)
-
-*Рисунок 1 — Сервисный аккаунт в списке Service Accounts.*
-
-![Начальная роль сервисного аккаунта](screenshots/02_service_account_storage_admin.png)
-
-*Рисунок 2 — Назначение роли Storage Admin сервисному аккаунту.*
-
-## 3. Создание виртуальной машины Compute Engine
-
-В разделе **Compute Engine → VM instances** создана виртуальная машина со следующими параметрами:
+В Compute Engine создана виртуальная машина со следующими параметрами.
 
 | Параметр | Значение |
 | --- | --- |
 | Имя | `relchiyan-vm-lab1` |
-| Регион | `us-central1` (Iowa) |
-| Зона после создания | `us-central1-c` |
-| Тип машины | `e2-micro` |
-| Оперативная память | 1 ГБ |
+| Регион и зона | `us-central1`, `us-central1-c` |
+| Тип машины | `e2-micro`, 1 ГиБ оперативной памяти |
 | Модель предоставления ресурсов | `Spot` |
-| Сервисный аккаунт VM | `relchiyan-sa-lab1` |
-| Access scopes | `Allow full access to all Cloud APIs` |
+| Операционная система | Debian GNU/Linux |
+| Сервисный аккаунт | `relchiyan-sa-lab1` |
+| Область доступа | `Allow full access to all Cloud APIs` |
 
-Режим Spot выбран по требованию задания. Такая машина может быть остановлена Google Cloud при необходимости высвобождения ресурсов. Установка полных API scopes сама по себе не предоставляет прав: операции дополнительно проверяются через IAM-роли сервисного аккаунта.
+![Тип e2-micro и модель Spot](screenshots/04_vm_e2_micro_spot.png)
 
-![Имя и регион виртуальной машины](screenshots/03_vm_name_region.png)
+*Рисунок 2 — Тип виртуальной машины и модель предоставления ресурсов.*
 
-*Рисунок 3 — Имя и регион создаваемой VM.*
+![Сервисный аккаунт и область доступа VM](screenshots/05_vm_identity_scopes.png)
 
-![Тип машины и режим Spot](screenshots/04_vm_e2_micro_spot.png)
+*Рисунок 3 — Сервисный аккаунт и область доступа виртуальной машины.*
 
-*Рисунок 4 — Тип e2-micro и модель предоставления ресурсов Spot.*
+После запуска виртуальной машины подключение выполнено по SSH через Google Cloud Console.
 
-![Сервисный аккаунт, привязанный к VM](screenshots/05_vm_identity_scopes.png)
+![Работающая виртуальная машина в Compute Engine](screenshots/06_vm_running.png)
 
-*Рисунок 5 — Выбор сервисного аккаунта и диапазона API-доступа.*
+*Рисунок 4 — Запущенная виртуальная машина в зоне us-central1-c.*
 
-После создания VM получила статус работающей машины; Google Cloud назначил ей зону `us-central1-c`. Подключение выполнялось через кнопку **SSH** в Cloud Console. На машине использовалась Debian GNU/Linux.
+## 3. Копирование объектов при роли Storage Admin
 
-![Запущенная виртуальная машина](screenshots/06_vm_running.png)
+В SSH-сеансе команда `gcloud auth list` показала, что активен сервисный аккаунт `relchiyan-sa-lab1`. Команда `gcloud storage ls gs://lab1-bucket-itmo/` вывела три объекта — `pic1.jpg`, `pic2.jpg` и `pic3.jpeg`.
 
-*Рисунок 6 — Запущенная VM relchiyan-vm-lab1 в Compute Engine.*
+![Активный аккаунт gcloud и список объектов бакета](screenshots/07_vm_auth_and_bucket.png)
 
-## 4. Проверка доступа к Cloud Storage и копирование файлов
-
-### 4.1. Учетные данные и содержимое бакета
-
-В SSH-терминале проверен активный аккаунт Google Cloud CLI и запрошен список объектов учебного бакета:
-
-```bash
-gcloud auth list
-gcloud storage ls gs://lab1-bucket-itmo/
-```
-
-Активным оказался сервисный аккаунт `relchiyan-sa-lab1@cloud-platforms-as-the-basis.iam.gserviceaccount.com`. Команда `gcloud storage ls` вывела три объекта:
-
-```text
-gs://lab1-bucket-itmo/pic1.jpg
-gs://lab1-bucket-itmo/pic2.jpg
-gs://lab1-bucket-itmo/pic3.jpeg
-```
-
-![Активный аккаунт gcloud и список объектов](screenshots/07_vm_auth_and_bucket.png)
-
-*Рисунок 7 — Проверка активного аккаунта и содержимого бакета.*
-
-### 4.2. Первое копирование при роли Storage Admin
-
-Создана локальная папка `~/lab1-files`, в которую скопированы объекты бакета. Затем командой `ls -lah` проверено наличие файлов:
+*Рисунок 5 — Активный аккаунт Google Cloud CLI и содержимое бакета.*
 
 ```bash
 mkdir -p ~/lab1-files
@@ -107,29 +63,21 @@ gcloud storage cp gs://lab1-bucket-itmo/* ~/lab1-files/
 ls -lah ~/lab1-files/
 ```
 
-Команда копирования завершилась сообщением `Completed files 3/3`. В каталоге `/home/rel70452/lab1-files/` находились:
+Команда копирования завершилась сообщением `Completed files 3/3`. Все три файла появились в каталоге `~/lab1-files/`.
 
-| Файл | Размер по `ls -lah` |
-| --- | ---: |
-| `pic1.jpg` | 228K |
-| `pic2.jpg` | 487K |
-| `pic3.jpeg` | 858K |
+![Результат копирования при роли Storage Admin](screenshots/08_files_copied_storage_admin.png)
 
-Общий объем передачи, указанный `gcloud`, составил около 1,5 MiB. Наличие файлов подтверждено выводом `ls -lah`.
+*Рисунок 6 — Результат копирования и содержимое локального каталога.*
 
-![Успешное копирование файлов](screenshots/08_files_copied_storage_admin.png)
+## 4. Повторное копирование при роли Compute Viewer
 
-*Рисунок 8 — Копирование трех файлов при роли Storage Admin и проверка локального каталога.*
+Роль `Storage Admin` у сервисного аккаунта заменена на `Compute Viewer` (`roles/compute.viewer`) в IAM проекта. Эта роль предоставляет доступ к сведениям о ресурсах Compute Engine.
 
-## 5. Замена роли и повторная проверка
+![Роль Compute Viewer в IAM проекта](screenshots/09_service_account_compute_viewer.png)
 
-В IAM роль сервисного аккаунта изменена с `Storage Admin` (`roles/storage.admin`) на `Compute Viewer` (`roles/compute.viewer`). Роль `Compute Viewer` позволяет просматривать сведения о ресурсах Compute Engine и **не предоставляет** права на чтение объектов Cloud Storage.
+*Рисунок 7 — Роль сервисного аккаунта после изменения.*
 
-![Роль Compute Viewer в IAM](screenshots/09_service_account_compute_viewer.png)
-
-*Рисунок 9 — Сервисный аккаунт после замены роли на Compute Viewer.*
-
-Для повторной проверки файлы копировались в отдельную папку, чтобы не использовать результаты первой операции:
+Для повторной операции использован отдельный каталог `~/lab1-files-viewer/`.
 
 ```bash
 mkdir -p ~/lab1-files-viewer
@@ -137,17 +85,15 @@ gcloud storage cp gs://lab1-bucket-itmo/* ~/lab1-files-viewer/
 ls -lah ~/lab1-files-viewer/
 ```
 
-**Фактический результат:** все три файла снова успешно скопированы (`Completed files 3/3`), несмотря на замену роли. Повторное выполнение исходной команды копирования также прошло без ошибки. Следовательно, наличие файлов во второй папке не объясняется использованием результатов первого скачивания.
+Команда снова завершилась сообщением `Completed files 3/3`. В новом каталоге появились все три файла.
 
-![Успешное копирование после смены роли](screenshots/10_files_copied_compute_viewer.png)
+![Повторное копирование при роли Compute Viewer](screenshots/10_files_copied_compute_viewer.png)
 
-*Рисунок 10 — Повторное копирование трех объектов при роли Compute Viewer.*
+*Рисунок 8 — Результат повторного копирования в отдельный каталог.*
 
-## 6. Проверка причины успешного копирования
+## 5. Проверка публичного доступа
 
-### 6.1. Запросы без авторизации Google
-
-Чтобы установить, доступны ли объекты независимо от учетных данных сервисного аккаунта, выполнены прямые HTTP-запросы через `curl`. Команда не передает токен Google или другие учетные данные:
+Для проверки доступности объектов выполнены прямые HTTP-запросы через `curl` без передачи токена авторизации.
 
 ```bash
 for file in pic1.jpg pic2.jpg pic3.jpeg; do
@@ -159,52 +105,26 @@ for file in pic1.jpg pic2.jpg pic3.jpeg; do
 done
 ```
 
-Результаты проверки:
+| Объект | HTTP-статус | Размер ответа, байт | Content-Type |
+| --- | --- | ---: | --- |
+| `pic1.jpg` | `200` | 233 289 | `image/jpeg` |
+| `pic2.jpg` | `200` | 498 260 | `image/jpeg` |
+| `pic3.jpeg` | `200` | 878 482 | `image/jpeg` |
 
-| Объект | HTTP-статус | Размер ответа | Content-Type |
-| --- | ---: | ---: | --- |
-| `pic1.jpg` | `200` | 233 289 байт | `image/jpeg` |
-| `pic2.jpg` | `200` | 498 260 байт | `image/jpeg` |
-| `pic3.jpeg` | `200` | 878 482 байта | `image/jpeg` |
+![Ответы HTTP 200 на запросы без токена авторизации](screenshots/11_public_http_checks.png)
 
-Все три объекта были доступны по прямым URL без авторизации. Это подтвердило публичный доступ к содержимому файлов.
+*Рисунок 9 — Результат проверки доступа к объектам без авторизации.*
 
-![Неавторизованные HTTP-запросы](screenshots/11_public_http_checks.png)
+В настройках бакета `lab1-bucket-itmo` зафиксированы публичный доступ и режим `Uniform bucket-level access`. В IAM-политике бакета субъекту `allUsers` назначена роль `Storage Object Viewer` (`roles/storage.objectViewer`). Она разрешает получать список объектов и скачивать их, в том числе без авторизации. [Документация Cloud Storage](https://docs.cloud.google.com/storage/docs/access-control/making-data-public)
 
-*Рисунок 11 — HTTP 200 для всех трех файлов без передачи учетных данных.*
+![Публичный доступ и режим Uniform bucket-level access](screenshots/12_bucket_public_access.png)
 
-### 6.2. Проверка настроек IAM самого бакета
+*Рисунок 10 — Настройки доступа к учебному бакету.*
 
-В Cloud Console открыта вкладка **Cloud Storage → Buckets → lab1-bucket-itmo → Permissions**. В свойствах бакета указано:
+## 6. Удаление ресурсов
 
-- `Public access: Access granted to public principals` — на уровне бакета существуют разрешения для публичных субъектов.
-- `Access control: Uniform` — индивидуальные ACL объектов отключены; права определяются IAM-политикой бакета.
+После завершения проверки через Google Cloud Console удалены виртуальная машина `relchiyan-vm-lab1` и сервисный аккаунт `relchiyan-sa-lab1`.
 
-![Настройки публичного доступа бакета](screenshots/12_bucket_public_access.png)
+## 7. Вывод
 
-*Рисунок 12 — Публичный доступ и режим Uniform bucket-level access.*
-
-В перечне разрешений бакета обнаружена запись `allUsers` с ролью `Storage Object Viewer`. В отличие от роли `Compute Viewer`, эта роль предоставляет чтение объектов Cloud Storage, а субъект `allUsers` включает в том числе неавторизованных пользователей.
-
-![Публичная роль на уровне бакета](screenshots/13_bucket_allusers_storage_object_viewer.png)
-
-*Рисунок 13 — Запись allUsers с ролью Storage Object Viewer в политике бакета.*
-
-Таким образом, сохранение доступа после замены `Storage Admin` на `Compute Viewer` объясняется **IAM-политикой общего учебного бакета**, а не правами `Compute Viewer`. При обращении к публичному объекту разрешение `allUsers` действует независимо от персональных разрешений сервисного аккаунта. Изменения в политике общего бакета не вносились.
-
-## 7. Удаление созданных ресурсов
-
-После завершения проверки из учебного проекта удалены созданные для этой работы ресурсы:
-
-- виртуальная машина `relchiyan-vm-lab1`;
-- сервисный аккаунт `relchiyan-sa-lab1`.
-
-Общий учебный бакет `lab1-bucket-itmo` и его разрешения не изменялись. Удаление выполнено через Google Cloud Console.
-
-## 8. Вывод
-
-В работе создан сервисный аккаунт, настроена виртуальная машина Compute Engine в режиме Spot, проверена авторизация Google Cloud CLI и выполнено копирование объектов Cloud Storage на VM. После изменения IAM-роли сервисного аккаунта с `Storage Admin` на `Compute Viewer` копирование файлов осталось доступным.
-
-Причина установлена дополнительной проверкой: все три файла отдаются по HTTP без авторизации, а в IAM-политике бакета `lab1-bucket-itmo` субъекту `allUsers` назначена роль `Storage Object Viewer`. Поэтому этот эксперимент **не показывает**, что `Compute Viewer` позволяет скачивать объекты из закрытых бакетов. Он показывает, что итоговый доступ определяется совокупностью действующих разрешений, в том числе разрешениями на уровне самого ресурса.
-
-Созданные для лабораторной ресурсы удалены после завершения работы.
+Во время обеих проверок на виртуальную машину скопированы три объекта из `lab1-bucket-itmo`. Замена роли на уровне проекта отозвала у сервисного аккаунта права `Storage Admin`. Роль `Compute Viewer` не даёт прав на чтение объектов Cloud Storage, но для самого бакета действовало отдельное разрешение: роль `Storage Object Viewer` для `allUsers`. При копировании по маске `*` Google Cloud CLI получил список объектов и скачал файлы благодаря этому публичному разрешению. Публичное чтение подтверждено ответами HTTP `200` на все три запроса без авторизации.
