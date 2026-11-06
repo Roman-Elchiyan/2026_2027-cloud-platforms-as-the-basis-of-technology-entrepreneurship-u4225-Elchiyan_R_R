@@ -5,7 +5,7 @@
 | Лабораторная работа | Тема | Материалы | Отчёт | Статус |
 | --- | --- | --- | --- | --- |
 | ЛР1 | Google Cloud, IAM и Compute Engine | [Папка](lab1/) | [Отчёт](lab1/lab1_report.md) | Выполнена |
-| ЛР2 | Cloud Run | [Папка](lab2/) | [Отчёт](lab2/lab2_report.md) | Не начата |
+| ЛР2 | Cloud Run | [Папка](lab2/) | [Отчёт](lab2/lab2_report.md) | Выполнена |
 | ЛР3 | Cloud Storage | [Папка](lab3/) | [Отчёт](lab3/lab3_report.md) | Не начата |
 | ЛР4 | Инфраструктура MVP AI-приложения | [Папка](lab4/) | [Отчёт](lab4/lab4_report.md) | Не начата |
 
