@@ -7,8 +7,8 @@ Year: 2026/2027\
 Group: U4225\
 Author: Элчиян Роман Романович\
 Lab: Lab3\
-Date of create: 06.11.2026\
-Date of finished: —
+Date of create: 01.11.2026\
+Date of finished: 06.11.2026
 
 ## Цель работы
 
