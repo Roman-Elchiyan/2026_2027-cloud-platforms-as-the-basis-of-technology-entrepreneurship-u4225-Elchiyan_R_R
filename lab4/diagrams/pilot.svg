@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="795" height="395" viewBox="0 0 795 395" role="img" aria-labelledby="title">
+<title id="title">Пилот FAQ AI-системы</title>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L8 4 L0 8 Z" fill="#333"/></marker></defs>
+<rect x="0" y="0" width="795" height="395" fill="white"/>
+<g font-family="Arial, sans-serif" font-size="14" fill="#222">
+<rect x="227" y="31" width="548" height="319" fill="#fafafa" stroke="#777" stroke-dasharray="5 4"/><text x="236" y="50" font-weight="bold">Контур приложения · Yandex Cloud</text>
+<path d="M156 95 H200.5 V95 H244" fill="none" stroke="#333" stroke-width="1.2" marker-end="url(#arrow)"/><text x="222.75" y="88" font-size="11" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="3">HTTPS</text>
+<path d="M156 203 H200.5 V95 H244" fill="none" stroke="#333" stroke-width="1.2" marker-end="url(#arrow)"/>
+<path d="M437 95 H500 V95 H562" fill="none" stroke="#333" stroke-width="1.2" marker-end="url(#arrow)"/><text x="521" y="109" font-size="11" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="3">Обращения и задания</text>
+<path d="M437 203 H500 V95 H562" fill="none" stroke="#333" stroke-width="1.2" marker-end="url(#arrow)"/><text x="531.5" y="88" font-size="11" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="3">Задания и индекс</text>
+<path d="M437 203 H500 V203 H562" fill="none" stroke="#333" stroke-width="1.2" marker-end="url(#arrow)"/><text x="531.5" y="196" font-size="11" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="3">Файлы</text>
+<path d="M437 95 H500 V311 H562" fill="none" stroke="#333" stroke-width="1.2" marker-end="url(#arrow)"/><text x="531.5" y="304" font-size="11" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="3">Метрики</text>
+<path d="M245 95 H233 V296 H341 V309" fill="none" stroke="#333" stroke-width="1.2" marker-end="url(#arrow)"/><text x="287" y="289" font-size="11" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="3">Вызовы API</text>
+<path d="M341 231 V270.5 H341 V309" fill="none" stroke="#333" stroke-width="1.2" marker-end="url(#arrow)"/>
+<rect x="245" y="67" width="192" height="56" fill="white" stroke="#333"/><text x="341" y="89" text-anchor="middle">Приложение на одной ВМ</text><text x="341" y="107" text-anchor="middle">API, роли и поиск FAQ</text>
+<rect x="245" y="175" width="192" height="56" fill="white" stroke="#333"/><text x="341" y="197" text-anchor="middle">Обработчик на той же ВМ</text><text x="341" y="215" text-anchor="middle">Индексация FAQ</text>
+<rect x="563" y="67" width="192" height="56" fill="white" stroke="#333"/><text x="659" y="89" text-anchor="middle">Managed PostgreSQL</text><text x="659" y="107" text-anchor="middle">Один хост и копии</text>
+<rect x="563" y="175" width="192" height="56" fill="white" stroke="#333"/><text x="659" y="197" text-anchor="middle">Object Storage</text><text x="659" y="215" text-anchor="middle">Документы FAQ</text>
+<rect x="563" y="283" width="192" height="56" fill="white" stroke="#333"/><text x="659" y="316" text-anchor="middle">Monitoring / Logging</text>
+<rect x="10" y="67" width="146" height="56" fill="white" stroke="#333"/><text x="83" y="89" text-anchor="middle">Покупатель</text><text x="83" y="107" text-anchor="middle">Веб-виджет</text>
+<rect x="10" y="175" width="146" height="56" fill="white" stroke="#333"/><text x="83" y="197" text-anchor="middle">Оператор и редактор</text><text x="83" y="215" text-anchor="middle">Кабинет</text>
+<rect x="245" y="310" width="192" height="56" fill="white" stroke="#333"/><text x="341" y="332" text-anchor="middle">Yandex AI Studio</text><text x="341" y="350" text-anchor="middle">Генерация и эмбеддинги</text>
+</g></svg>
