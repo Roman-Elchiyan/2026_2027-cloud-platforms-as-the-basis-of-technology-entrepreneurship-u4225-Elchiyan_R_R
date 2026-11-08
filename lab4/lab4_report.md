@@ -7,7 +7,7 @@ Year: 2026/2027
 Group: U4225  
 Author: Elchiyan Roman Romanovich  
 Lab: Lab4  
-Date of create: 08.11.2026\
+Date of create: 05.11.2026\
 Date of finished: отчёт подготовлен 09.11.2026
 
 ## 1. Продукт и границы работы
