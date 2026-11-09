@@ -8,7 +8,7 @@ Group: U4225
 Author: Elchiyan Roman Romanovich  
 Lab: Lab4  
 Date of create: 05.11.2026\
-Date of finished: —
+Date of finished: 09.11.2026
 
 ## 1. FAQ AI-система и расчётная нагрузка
 
