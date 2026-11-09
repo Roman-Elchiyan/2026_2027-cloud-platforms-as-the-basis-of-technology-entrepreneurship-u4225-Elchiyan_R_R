@@ -1,5 +1,5 @@
 <mxfile host="app.diagrams.net" compressed="false">
-<diagram id="mvp" name="Прототип"><mxGraphModel grid="1" page="1" pageWidth="795" pageHeight="260"><root>
+<diagram id="mvp" name="Начальная инфраструктура"><mxGraphModel grid="1" page="1" pageWidth="795" pageHeight="260"><root>
 <mxCell id="0"/><mxCell id="1" parent="0"/>
 <mxCell id="vm" parent="1" vertex="1" value="Yandex Cloud · одна ВМ" style="dashed=1;fillColor=#fafafa;strokeColor=#777777;verticalAlign=top;align=left;spacing=8;fontStyle=1;"><mxGeometry x="229" y="31" width="229" height="210" as="geometry"/></mxCell>
 <mxCell id="app" parent="1" vertex="1" value="Приложение&lt;br&gt;Веб-API и поиск FAQ" style="whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=14;"><mxGeometry x="248" y="67" width="192" height="56" as="geometry"/></mxCell>
@@ -14,7 +14,7 @@
 <mxCell id="e3" parent="1" edge="1" source="pg" target="s3" value="pg_dump" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;"><mxGeometry relative="1" as="geometry"/></mxCell>
 <mxCell id="e4" parent="1" edge="1" source="app" target="ai" value="Запрос к модели" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;"><mxGeometry relative="1" as="geometry"/></mxCell>
 </root></mxGraphModel></diagram>
-<diagram id="pilot" name="Пилот"><mxGraphModel grid="1" page="1" pageWidth="795" pageHeight="420"><root>
+<diagram id="pilot" name="Тестирование партнёрами"><mxGraphModel grid="1" page="1" pageWidth="795" pageHeight="420"><root>
 <mxCell id="0"/><mxCell id="1" parent="0"/>
 <mxCell id="cloud" parent="1" vertex="1" value="Контур приложения · Yandex Cloud" style="dashed=1;fillColor=#fafafa;strokeColor=#777777;verticalAlign=top;align=left;spacing=8;fontStyle=1;"><mxGeometry x="219" y="24" width="550" height="292" as="geometry"/></mxCell>
 <mxCell id="user" parent="1" vertex="1" value="Покупатель&lt;br&gt;Веб-виджет" style="whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=14;"><mxGeometry x="10" y="64" width="150" height="56" as="geometry"/></mxCell>
@@ -31,7 +31,7 @@
 <mxCell id="e4" parent="1" edge="1" source="app" target="obs" value="Метрики" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;fontSize=11;labelBackgroundColor=#ffffff;exitX=1.000;exitY=0.808;entryX=0.000;entryY=0.500;"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="511" y="174"/><mxPoint x="511" y="255"/></Array></mxGeometry></mxCell>
 <mxCell id="e5" parent="1" edge="1" source="app" target="ai" value="HTTPS" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.500;exitY=1.000;entryX=0.500;entryY=0.000;"><mxGeometry relative="1" as="geometry"/></mxCell>
 </root></mxGraphModel></diagram>
-<diagram id="production" name="Production с API"><mxGraphModel grid="1" page="1" pageWidth="970" pageHeight="451"><root>
+<diagram id="production" name="Промышленная эксплуатация с API"><mxGraphModel grid="1" page="1" pageWidth="970" pageHeight="451"><root>
 <mxCell id="0"/><mxCell id="1" parent="0"/>
 <mxCell id="cloud" parent="1" vertex="1" value="Контур приложения · Yandex Cloud" style="dashed=1;fillColor=#fafafa;strokeColor=#777777;verticalAlign=top;align=left;spacing=8;fontStyle=1;"><mxGeometry x="193" y="31" width="755" height="282" as="geometry"/></mxCell>
 <mxCell id="lb" parent="1" vertex="1" value="Публичный NLB&lt;br&gt;Выбирает одну ВМ" style="whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=14;"><mxGeometry x="213" y="115" width="146" height="56" as="geometry"/></mxCell>
@@ -56,7 +56,7 @@
 <mxCell id="e10" parent="1" edge="1" source="a" target="ai" value="NAT / HTTPS" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;"><mxGeometry relative="1" as="geometry"/></mxCell>
 <mxCell id="e11" parent="1" edge="1" source="b" target="ai" value="" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;"><mxGeometry relative="1" as="geometry"/></mxCell>
 </root></mxGraphModel></diagram>
-<diagram id="production-gpu" name="Production с GPU"><mxGraphModel grid="1" page="1" pageWidth="970" pageHeight="465"><root>
+<diagram id="production-gpu" name="Промышленная эксплуатация с GPU"><mxGraphModel grid="1" page="1" pageWidth="970" pageHeight="465"><root>
 <mxCell id="0"/><mxCell id="1" parent="0"/>
 <mxCell id="cloud" parent="1" vertex="1" value="Контур приложения · Yandex Cloud" style="dashed=1;fillColor=#fafafa;strokeColor=#777777;verticalAlign=top;align=left;spacing=8;fontStyle=1;"><mxGeometry x="193" y="31" width="755" height="282" as="geometry"/></mxCell>
 <mxCell id="dc" parent="1" vertex="1" value="ЦОД · СПб" style="dashed=1;fillColor=#fafafa;strokeColor=#777777;verticalAlign=top;align=left;spacing=8;fontStyle=1;"><mxGeometry x="435" y="339" width="234" height="107" as="geometry"/></mxCell>
