@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="950" height="430" viewBox="0 0 950 430" role="img" aria-labelledby="title desc">
+<title id="title">Расходы после покупки при росте нагрузки</title>
+<desc id="desc">При старте с 46 тысяч вызовов за 12 месяцев вложения не возвращаются. При старте с 805 тысяч и том же росте накопленные расходы пересекаются на 11-м месяце.</desc>
+<rect width="950" height="430" fill="white"/>
+<g font-family="Arial, Liberation Sans, sans-serif" font-size="14" fill="#202630">
+<text x="24.00" y="34.00" font-size="24" text-anchor="start" fill="#202630" font-weight="700">Накопленные расходы при росте нагрузки</text>
+<line x1="25.00" y1="60.00" x2="51.00" y2="60.00" stroke="#1d5b99" stroke-width="3"/>
+<text x="59.00" y="64.00" font-size="14" text-anchor="start" fill="#202630" font-weight="400">Генерация через API</text>
+<line x1="235.00" y1="60.00" x2="261.00" y2="60.00" stroke="#a14d22" stroke-width="3" stroke-dasharray="8 5"/>
+<text x="269.00" y="64.00" font-size="14" text-anchor="start" fill="#202630" font-weight="400">Две L4 + облачный резерв</text>
+<text x="60.00" y="108.00" font-size="16" text-anchor="start" fill="#202630" font-weight="700">Старт с 46 тыс. вызовов в месяц</text>
+<line x1="60.00" y1="345.00" x2="415.00" y2="345.00" stroke="#dce2e9" stroke-width="1"/>
+<text x="48.00" y="350.00" font-size="14" text-anchor="end" fill="#485462" font-weight="400">0</text>
+<line x1="60.00" y1="295.50" x2="415.00" y2="295.50" stroke="#dce2e9" stroke-width="1"/>
+<text x="48.00" y="300.50" font-size="14" text-anchor="end" fill="#485462" font-weight="400">1</text>
+<line x1="60.00" y1="246.00" x2="415.00" y2="246.00" stroke="#dce2e9" stroke-width="1"/>
+<text x="48.00" y="251.00" font-size="14" text-anchor="end" fill="#485462" font-weight="400">2</text>
+<line x1="60.00" y1="196.50" x2="415.00" y2="196.50" stroke="#dce2e9" stroke-width="1"/>
+<text x="48.00" y="201.50" font-size="14" text-anchor="end" fill="#485462" font-weight="400">3</text>
+<line x1="60.00" y1="147.00" x2="415.00" y2="147.00" stroke="#dce2e9" stroke-width="1"/>
+<text x="48.00" y="152.00" font-size="14" text-anchor="end" fill="#485462" font-weight="400">4</text>
+<line x1="60.00" y1="345.00" x2="60.00" y2="350.00" stroke="#738093" stroke-width="1"/>
+<text x="60.00" y="368.00" font-size="14" text-anchor="middle" fill="#485462" font-weight="400">0</text>
+<line x1="148.75" y1="345.00" x2="148.75" y2="350.00" stroke="#738093" stroke-width="1"/>
+<text x="148.75" y="368.00" font-size="14" text-anchor="middle" fill="#485462" font-weight="400">3</text>
+<line x1="237.50" y1="345.00" x2="237.50" y2="350.00" stroke="#738093" stroke-width="1"/>
+<text x="237.50" y="368.00" font-size="14" text-anchor="middle" fill="#485462" font-weight="400">6</text>
+<line x1="326.25" y1="345.00" x2="326.25" y2="350.00" stroke="#738093" stroke-width="1"/>
+<text x="326.25" y="368.00" font-size="14" text-anchor="middle" fill="#485462" font-weight="400">9</text>
+<line x1="415.00" y1="345.00" x2="415.00" y2="350.00" stroke="#738093" stroke-width="1"/>
+<text x="415.00" y="368.00" font-size="14" text-anchor="middle" fill="#485462" font-weight="400">12</text>
+<line x1="60.00" y1="345.00" x2="415.00" y2="345.00" stroke="#738093" stroke-width="1"/>
+<line x1="60.00" y1="147.00" x2="60.00" y2="345.00" stroke="#738093" stroke-width="1"/>
+<text x="60.00" y="135.00" font-size="14" text-anchor="start" fill="#485462" font-weight="400">млн ₽</text>
+<text x="237.50" y="391.00" font-size="14" text-anchor="middle" fill="#485462" font-weight="400">месяц после покупки</text>
+<polyline points="60.00,345.00 89.58,343.93 119.17,342.61 148.75,341.04 178.33,339.23 207.92,337.18 237.50,334.90 267.08,332.39 296.67,329.67 326.25,326.73 355.83,323.57 385.42,320.22 415.00,316.66" fill="none" stroke="#1d5b99" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="60.00,221.00 89.58,218.08 119.17,215.11 148.75,212.09 178.33,209.01 207.92,205.89 237.50,202.73 267.08,199.51 296.67,196.25 326.25,192.95 355.83,189.61 385.42,186.22 415.00,182.80" fill="none" stroke="#a14d22" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 5"/>
+<text x="538.00" y="108.00" font-size="16" text-anchor="start" fill="#202630" font-weight="700">Старт с 805 тыс. вызовов в месяц</text>
+<line x1="538.00" y1="345.00" x2="893.00" y2="345.00" stroke="#dce2e9" stroke-width="1"/>
+<text x="526.00" y="350.00" font-size="14" text-anchor="end" fill="#485462" font-weight="400">0</text>
+<line x1="538.00" y1="305.40" x2="893.00" y2="305.40" stroke="#dce2e9" stroke-width="1"/>
+<text x="526.00" y="310.40" font-size="14" text-anchor="end" fill="#485462" font-weight="400">1</text>
+<line x1="538.00" y1="265.80" x2="893.00" y2="265.80" stroke="#dce2e9" stroke-width="1"/>
+<text x="526.00" y="270.80" font-size="14" text-anchor="end" fill="#485462" font-weight="400">2</text>
+<line x1="538.00" y1="226.20" x2="893.00" y2="226.20" stroke="#dce2e9" stroke-width="1"/>
+<text x="526.00" y="231.20" font-size="14" text-anchor="end" fill="#485462" font-weight="400">3</text>
+<line x1="538.00" y1="186.60" x2="893.00" y2="186.60" stroke="#dce2e9" stroke-width="1"/>
+<text x="526.00" y="191.60" font-size="14" text-anchor="end" fill="#485462" font-weight="400">4</text>
+<line x1="538.00" y1="147.00" x2="893.00" y2="147.00" stroke="#dce2e9" stroke-width="1"/>
+<text x="526.00" y="152.00" font-size="14" text-anchor="end" fill="#485462" font-weight="400">5</text>
+<line x1="538.00" y1="345.00" x2="538.00" y2="350.00" stroke="#738093" stroke-width="1"/>
+<text x="538.00" y="368.00" font-size="14" text-anchor="middle" fill="#485462" font-weight="400">0</text>
+<line x1="626.75" y1="345.00" x2="626.75" y2="350.00" stroke="#738093" stroke-width="1"/>
+<text x="626.75" y="368.00" font-size="14" text-anchor="middle" fill="#485462" font-weight="400">3</text>
+<line x1="715.50" y1="345.00" x2="715.50" y2="350.00" stroke="#738093" stroke-width="1"/>
+<text x="715.50" y="368.00" font-size="14" text-anchor="middle" fill="#485462" font-weight="400">6</text>
+<line x1="804.25" y1="345.00" x2="804.25" y2="350.00" stroke="#738093" stroke-width="1"/>
+<text x="804.25" y="368.00" font-size="14" text-anchor="middle" fill="#485462" font-weight="400">9</text>
+<line x1="893.00" y1="345.00" x2="893.00" y2="350.00" stroke="#738093" stroke-width="1"/>
+<text x="893.00" y="368.00" font-size="14" text-anchor="middle" fill="#485462" font-weight="400">12</text>
+<line x1="538.00" y1="345.00" x2="893.00" y2="345.00" stroke="#738093" stroke-width="1"/>
+<line x1="538.00" y1="147.00" x2="538.00" y2="345.00" stroke="#738093" stroke-width="1"/>
+<text x="538.00" y="135.00" font-size="14" text-anchor="start" fill="#485462" font-weight="400">млн ₽</text>
+<text x="715.50" y="391.00" font-size="14" text-anchor="middle" fill="#485462" font-weight="400">месяц после покупки</text>
+<polyline points="538.00,345.00 567.58,330.02 597.17,315.00 626.75,299.92 656.33,284.81 685.92,269.65 715.50,254.46 745.08,239.23 774.67,223.96 804.25,208.67 833.83,193.35 863.42,178.00 893.00,162.63" fill="none" stroke="#1d5b99" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="538.00,245.80 567.58,239.74 597.17,233.67 626.75,227.59 656.33,221.51 685.92,215.42 715.50,209.33 745.08,203.23 774.67,197.13 804.25,191.02 833.83,184.92 863.42,178.81 893.00,172.70" fill="none" stroke="#a14d22" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 5"/>
+<circle cx="860.83" cy="179.34" r="5" fill="white" stroke="#202630" stroke-width="2"/>
+<line x1="860.83" y1="179.34" x2="835.83" y2="236.34" stroke="#738093" stroke-width="1"/>
+<text x="831.83" y="241.34" font-size="14" text-anchor="end" fill="#202630" font-weight="700">11-й месяц</text>
+<text x="475.00" y="416.00" font-size="14" text-anchor="middle" fill="#485462" font-weight="400">Рост в обоих сценариях — 11 500 вызовов в месяц</text>
+</g>
+</svg>

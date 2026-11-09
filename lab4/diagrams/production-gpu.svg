@@ -4,7 +4,7 @@
 <rect x="0" y="0" width="970" height="465" fill="white"/>
 <g font-family="Arial, sans-serif" font-size="14" fill="#222">
 <rect x="193" y="31" width="755" height="282" fill="#fafafa" stroke="#777" stroke-dasharray="5 4"/><text x="202" y="50" font-weight="bold">Контур приложения · Yandex Cloud</text>
-<rect x="435" y="339" width="234" height="107" fill="#fafafa" stroke="#777" stroke-dasharray="5 4"/><text x="444" y="358" font-weight="bold" font-size="12">Локальный контур · офис или ЦОД</text>
+<rect x="435" y="339" width="234" height="107" fill="#fafafa" stroke="#777" stroke-dasharray="5 4"/><text x="444" y="357" font-weight="bold" font-size="12">ЦОД · СПб</text>
 <path d="M156 95 H184.5 V143 H212" fill="none" stroke="#333" stroke-width="1.2" marker-end="url(#arrow)"/><text x="198.75" y="136" font-size="11" text-anchor="middle" paint-order="stroke" stroke="white" stroke-width="3">HTTPS</text>
 <path d="M156 203 H184.5 V143 H212" fill="none" stroke="#333" stroke-width="1.2" marker-end="url(#arrow)"/>
 <path d="M359 143 H407 V95 H454" fill="none" stroke="#333" stroke-width="1.2" marker-end="url(#arrow)"/>
@@ -25,8 +25,8 @@
 <rect x="735" y="67" width="192" height="56" fill="white" stroke="#333"/><text x="831" y="89" text-anchor="middle">Managed PostgreSQL</text><text x="831" y="107" text-anchor="middle">Основной хост + реплика</text>
 <rect x="735" y="155" width="192" height="56" fill="white" stroke="#333"/><text x="831" y="177" text-anchor="middle">Object Storage</text><text x="831" y="195" text-anchor="middle">Документы FAQ</text>
 <rect x="735" y="243" width="192" height="56" fill="white" stroke="#333"/><text x="831" y="276" text-anchor="middle">Monitoring / Logging</text>
-<rect x="455" y="374" width="192" height="56" fill="white" stroke="#333"/><text x="551" y="396" text-anchor="middle">GPU-сервер · vLLM</text><text x="551" y="414" text-anchor="middle">Qwen3-8B</text>
+<rect x="455" y="374" width="192" height="56" fill="white" stroke="#333"/><text x="551" y="396" text-anchor="middle">2 × NVIDIA L4 · vLLM</text><text x="551" y="414" text-anchor="middle">Qwen3-8B</text>
 <rect x="10" y="67" width="146" height="56" fill="white" stroke="#333"/><text x="83" y="89" text-anchor="middle">Покупатель</text><text x="83" y="107" text-anchor="middle">Веб-виджет</text>
-<rect x="10" y="175" width="146" height="56" fill="white" stroke="#333"/><text x="83" y="197" text-anchor="middle">Оператор и редактор</text><text x="83" y="215" text-anchor="middle">Кабинет</text>
+<rect x="10" y="175" width="146" height="56" fill="white" stroke="#333"/><text x="83" y="197" text-anchor="middle">Сотрудники партнёра</text><text x="83" y="215" text-anchor="middle">Кабинет</text>
 <rect x="735" y="374" width="192" height="56" fill="white" stroke="#333"/><text x="831" y="396" text-anchor="middle">Yandex AI Studio</text><text x="831" y="414" text-anchor="middle">Резерв и эмбеддинги</text>
 </g></svg>

@@ -12,7 +12,7 @@
 <rect x="248" y="67" width="192" height="56" fill="white" stroke="#333"/><text x="344" y="89" text-anchor="middle">Приложение</text><text x="344" y="107" text-anchor="middle">Веб-API и поиск FAQ</text>
 <rect x="248" y="172" width="192" height="56" fill="white" stroke="#333"/><text x="344" y="194" text-anchor="middle">PostgreSQL</text><text x="344" y="212" text-anchor="middle">FAQ и обращения</text>
 <rect x="10" y="67" width="146" height="56" fill="white" stroke="#333"/><text x="83" y="89" text-anchor="middle">Покупатель</text><text x="83" y="107" text-anchor="middle">Веб-виджет</text>
-<rect x="10" y="172" width="146" height="56" fill="white" stroke="#333"/><text x="83" y="194" text-anchor="middle">Оператор и редактор</text><text x="83" y="212" text-anchor="middle">Кабинет</text>
+<rect x="10" y="172" width="146" height="56" fill="white" stroke="#333"/><text x="83" y="194" text-anchor="middle">Сотрудники партнёра</text><text x="83" y="212" text-anchor="middle">Кабинет</text>
 <rect x="542" y="172" width="192" height="56" fill="white" stroke="#333"/><text x="638" y="194" text-anchor="middle">Object Storage</text><text x="638" y="212" text-anchor="middle">Копия БД</text>
 <rect x="542" y="67" width="192" height="56" fill="white" stroke="#333"/><text x="638" y="89" text-anchor="middle">Yandex AI Studio</text><text x="638" y="107" text-anchor="middle">Qwen3.6 35B</text>
 </g></svg>

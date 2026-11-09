@@ -23,6 +23,6 @@
 <rect x="735" y="155" width="192" height="56" fill="white" stroke="#333"/><text x="831" y="177" text-anchor="middle">Object Storage</text><text x="831" y="195" text-anchor="middle">Документы FAQ</text>
 <rect x="735" y="243" width="192" height="56" fill="white" stroke="#333"/><text x="831" y="276" text-anchor="middle">Monitoring / Logging</text>
 <rect x="10" y="67" width="146" height="56" fill="white" stroke="#333"/><text x="83" y="89" text-anchor="middle">Покупатель</text><text x="83" y="107" text-anchor="middle">Веб-виджет</text>
-<rect x="10" y="175" width="146" height="56" fill="white" stroke="#333"/><text x="83" y="197" text-anchor="middle">Оператор и редактор</text><text x="83" y="215" text-anchor="middle">Кабинет</text>
+<rect x="10" y="175" width="146" height="56" fill="white" stroke="#333"/><text x="83" y="197" text-anchor="middle">Сотрудники партнёра</text><text x="83" y="215" text-anchor="middle">Кабинет</text>
 <rect x="735" y="374" width="192" height="56" fill="white" stroke="#333"/><text x="831" y="396" text-anchor="middle">Yandex AI Studio</text><text x="831" y="414" text-anchor="middle">Генерация и эмбеддинги</text>
 </g></svg>
