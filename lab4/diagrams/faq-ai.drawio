@@ -7,7 +7,7 @@
 <mxCell id="user" parent="1" vertex="1" value="Покупатель&lt;br&gt;Веб-виджет" style="whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=14;"><mxGeometry x="10" y="67" width="146" height="56" as="geometry"/></mxCell>
 <mxCell id="ops" parent="1" vertex="1" value="Оператор и редактор&lt;br&gt;Кабинет" style="whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=14;"><mxGeometry x="10" y="172" width="146" height="56" as="geometry"/></mxCell>
 <mxCell id="s3" parent="1" vertex="1" value="Object Storage&lt;br&gt;Копия БД" style="whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=14;"><mxGeometry x="542" y="172" width="192" height="56" as="geometry"/></mxCell>
-<mxCell id="ai" parent="1" vertex="1" value="Yandex AI Studio&lt;br&gt;YandexGPT Lite" style="whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=14;"><mxGeometry x="542" y="67" width="192" height="56" as="geometry"/></mxCell>
+<mxCell id="ai" parent="1" vertex="1" value="Yandex AI Studio&lt;br&gt;Qwen3.6 35B" style="whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=14;"><mxGeometry x="542" y="67" width="192" height="56" as="geometry"/></mxCell>
 <mxCell id="e0" parent="1" edge="1" source="user" target="app" value="HTTPS" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;"><mxGeometry relative="1" as="geometry"/></mxCell>
 <mxCell id="e1" parent="1" edge="1" source="ops" target="app" value="" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;"><mxGeometry relative="1" as="geometry"/></mxCell>
 <mxCell id="e2" parent="1" edge="1" source="app" target="pg" value="SQL" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;"><mxGeometry relative="1" as="geometry"/></mxCell>
@@ -37,7 +37,7 @@
 <diagram id="production" name="Production с API"><mxGraphModel grid="1" page="1" pageWidth="970" pageHeight="451"><root>
 <mxCell id="0"/><mxCell id="1" parent="0"/>
 <mxCell id="cloud" parent="1" vertex="1" value="Контур приложения · Yandex Cloud" style="dashed=1;fillColor=#fafafa;strokeColor=#777777;verticalAlign=top;align=left;spacing=8;fontStyle=1;"><mxGeometry x="193" y="31" width="755" height="282" as="geometry"/></mxCell>
-<mxCell id="lb" parent="1" vertex="1" value="Публичный NLB&lt;br&gt;TCP 443" style="whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=14;"><mxGeometry x="213" y="115" width="146" height="56" as="geometry"/></mxCell>
+<mxCell id="lb" parent="1" vertex="1" value="Публичный NLB&lt;br&gt;Выбирает одну ВМ" style="whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=14;"><mxGeometry x="213" y="115" width="146" height="56" as="geometry"/></mxCell>
 <mxCell id="a" parent="1" vertex="1" value="ВМ приложения A&lt;br&gt;Зона A" style="whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=14;"><mxGeometry x="455" y="67" width="192" height="56" as="geometry"/></mxCell>
 <mxCell id="b" parent="1" vertex="1" value="ВМ приложения B&lt;br&gt;Зона B" style="whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=14;"><mxGeometry x="455" y="175" width="192" height="56" as="geometry"/></mxCell>
 <mxCell id="pg" parent="1" vertex="1" value="Managed PostgreSQL&lt;br&gt;Основной хост + реплика" style="whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=14;"><mxGeometry x="735" y="67" width="192" height="56" as="geometry"/></mxCell>
@@ -63,7 +63,7 @@
 <mxCell id="0"/><mxCell id="1" parent="0"/>
 <mxCell id="cloud" parent="1" vertex="1" value="Контур приложения · Yandex Cloud" style="dashed=1;fillColor=#fafafa;strokeColor=#777777;verticalAlign=top;align=left;spacing=8;fontStyle=1;"><mxGeometry x="193" y="31" width="755" height="282" as="geometry"/></mxCell>
 <mxCell id="dc" parent="1" vertex="1" value="Локальный контур · офис или ЦОД" style="dashed=1;fillColor=#fafafa;strokeColor=#777777;verticalAlign=top;align=left;spacing=8;fontStyle=1;"><mxGeometry x="435" y="339" width="234" height="107" as="geometry"/></mxCell>
-<mxCell id="lb" parent="1" vertex="1" value="Публичный NLB&lt;br&gt;TCP 443" style="whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=14;"><mxGeometry x="213" y="115" width="146" height="56" as="geometry"/></mxCell>
+<mxCell id="lb" parent="1" vertex="1" value="Публичный NLB&lt;br&gt;Выбирает одну ВМ" style="whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=14;"><mxGeometry x="213" y="115" width="146" height="56" as="geometry"/></mxCell>
 <mxCell id="a" parent="1" vertex="1" value="ВМ приложения A&lt;br&gt;Зона A" style="whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=14;"><mxGeometry x="455" y="67" width="192" height="56" as="geometry"/></mxCell>
 <mxCell id="b" parent="1" vertex="1" value="ВМ приложения B&lt;br&gt;Зона B" style="whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=14;"><mxGeometry x="455" y="175" width="192" height="56" as="geometry"/></mxCell>
 <mxCell id="pg" parent="1" vertex="1" value="Managed PostgreSQL&lt;br&gt;Основной хост + реплика" style="whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=14;"><mxGeometry x="735" y="67" width="192" height="56" as="geometry"/></mxCell>

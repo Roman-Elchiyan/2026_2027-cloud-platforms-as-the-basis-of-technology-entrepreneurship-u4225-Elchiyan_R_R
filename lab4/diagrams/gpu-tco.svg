@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="970" height="510" viewBox="0 0 970 510" role="img" aria-labelledby="title desc">
 <title id="title">Накопленные расходы на production за 12 месяцев</title>
-<desc id="desc">Через год API стоит 495 684 рубля, гибрид с покупкой карты и размещением стоит 890 534 рубля, гибрид с сервером 2U и эксплуатацией стоит 2 896 186 рублей.</desc>
+<desc id="desc">Через год API стоит 509 484 рубля, гибрид с покупкой карты и размещением стоит 893 294 рубля, гибрид с сервером 2U и эксплуатацией стоит 2 934 046 рублей.</desc>
 <rect width="970" height="510" fill="white"/>
 <g font-family="Arial, sans-serif" fill="#263342" font-size="14">
 <text x="36" y="38" font-size="24" font-weight="bold">Накопленные расходы на production</text>
@@ -21,8 +21,8 @@
 <path d="M644 99V419" stroke="#edf0f3"/><text x="644" y="441" text-anchor="middle">10</text>
 <path d="M752 99V419" stroke="#edf0f3"/><text x="752" y="441" text-anchor="middle">12</text>
 <path d="M104 99V419H752" fill="none" stroke="#667382"/>
-<path d="M104 419L752 366.1270272" fill="none" stroke="#1453a0" stroke-width="3"/><circle cx="752" cy="366.1270272" r="4" fill="#1453a0"/><text x="767" y="371.1270272" fill="#1453a0" font-weight="bold">496 тыс. ₽</text><path d="M35 476h25" stroke="#1453a0" stroke-width="3"/><text x="69" y="481" font-size="13">YandexGPT API</text>
-<path d="M104 364.8993066666667L752 324.0096938666667" fill="none" stroke="#b76013" stroke-width="3" stroke-dasharray="9 6"/><circle cx="752" cy="324.0096938666667" r="4" fill="#b76013"/><text x="767" y="329.0096938666667" fill="#b76013" font-weight="bold">891 тыс. ₽</text><path d="M245 476h25" stroke="#b76013" stroke-width="3" stroke-dasharray="9 6"/><text x="279" y="481" font-size="13">GPU + размещение, без сервера</text>
-<path d="M104 207.29397333333333L752 110.07348053333334" fill="none" stroke="#316b56" stroke-width="3"/><circle cx="752" cy="110.07348053333334" r="4" fill="#316b56"/><text x="767" y="115.07348053333334" fill="#316b56" font-weight="bold">2,90 млн ₽</text><path d="M590 476h25" stroke="#316b56" stroke-width="3"/><text x="624" y="481" font-size="13">GPU + сервер 2U + эксплуатация</text>
+<path d="M104 419L752 364.655" fill="none" stroke="#1453a0" stroke-width="3"/><circle cx="752" cy="364.655" r="4" fill="#1453a0"/><text x="767" y="369.655" fill="#1453a0" font-weight="bold">509 тыс. ₽</text><path d="M35 476h25" stroke="#1453a0" stroke-width="3"/><text x="69" y="481" font-size="13">Qwen3.6 35B API</text>
+<path d="M104 364.8993066666667L752 323.715" fill="none" stroke="#b76013" stroke-width="3" stroke-dasharray="9 6"/><circle cx="752" cy="323.715" r="4" fill="#b76013"/><text x="767" y="328.715" fill="#b76013" font-weight="bold">893 тыс. ₽</text><path d="M245 476h25" stroke="#b76013" stroke-width="3" stroke-dasharray="9 6"/><text x="279" y="481" font-size="13">GPU + размещение, без сервера</text>
+<path d="M104 206.358L752 106.035" fill="none" stroke="#316b56" stroke-width="3"/><circle cx="752" cy="106.035" r="4" fill="#316b56"/><text x="767" y="111.035" fill="#316b56" font-weight="bold">2,93 млн ₽</text><path d="M590 476h25" stroke="#316b56" stroke-width="3"/><text x="624" y="481" font-size="13">GPU + сервер 2U + эксплуатация</text>
 <text x="770" y="441" >месяц</text>
 </g></svg>
